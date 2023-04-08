@@ -57,6 +57,7 @@ class NotificationController extends GetxController {
     getPermission();
     TokenSubs();
     getMessage();
+    FirebaseMessaging.instance.getToken().then((value) => print(value));
 
     super.onInit();
   }
