@@ -14,6 +14,11 @@ dependencies:
   firebase_messaging: ^14.4.0
   firebase_analytics: ^10.2.0
   app_usage: ^2.1.1
+  geolocator: ^9.0.2
+  location: ^4.4.0
+  animated_bottom_navigation_bar: ^1.2.0
+  device_apps: ^2.2.0
+  timeago: ^3.4.0
 
 dev_dependencies: 
   flutter_lints: ^2.0.0
