@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 
+import '../../../routes/app_pages.dart';
 import '../controllers/login_controller.dart';
 
 class LoginView extends GetView<LoginController> {
@@ -13,10 +14,18 @@ class LoginView extends GetView<LoginController> {
         title: const Text('LoginView'),
         centerTitle: true,
       ),
-      body: const Center(
-        child: Text(
-          'LoginView is working',
-          style: TextStyle(fontSize: 20),
+      body:  Center(
+        child: Column(
+          children: [
+            Text(
+              'LoginView is working',
+              style: TextStyle(fontSize: 20),
+            ),
+            ElevatedButton( onPressed: () {
+              Get.toNamed(Routes.STATISTICS);
+            },
+                child:Text("View Stats"))
+          ],
         ),
       ),
     );
