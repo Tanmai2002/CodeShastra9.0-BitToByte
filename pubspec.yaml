@@ -13,6 +13,7 @@ dependencies:
   firebase_core: ^2.9.0
   firebase_messaging: ^14.4.0
   firebase_analytics: ^10.2.0
+  app_usage: ^2.1.1
 
 dev_dependencies: 
   flutter_lints: ^2.0.0
