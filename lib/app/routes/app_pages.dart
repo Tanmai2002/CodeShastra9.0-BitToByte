@@ -1,5 +1,7 @@
 import 'package:get/get.dart';
 
+import '../modules/QrCode/bindings/qr_code_binding.dart';
+import '../modules/QrCode/views/qr_code_view.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
 import '../modules/login/bindings/login_binding.dart';
@@ -14,7 +16,7 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  static const INITIAL = Routes.STATISTICS;
+  static const INITIAL = Routes.QR_CODE;
 
   static final routes = [
     GetPage(
@@ -34,8 +36,13 @@ class AppPages {
     ),
     GetPage(
       name: _Paths.STATISTICS,
-      page: () =>  StatisticsView(),
+      page: () => StatisticsView(),
       binding: StatisticsBinding(),
+    ),
+    GetPage(
+      name: _Paths.QR_CODE,
+      page: () => const QrCodeView(),
+      binding: QrCodeBinding(),
     ),
   ];
 }
