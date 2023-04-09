@@ -17,6 +17,7 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.1.0"
+
   analyzer:
     dependency: transitive
     description:
@@ -41,6 +42,15 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.4.0"
+
+  app_usage:
+    dependency: "direct main"
+    description:
+      name: app_usage
+      sha256: a5df27a93a3fdfcf5303a12dfe8f74629b465b3fb834c0cd47fa068376cb5c4b
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.1.1"
   async:
     dependency: transitive
     description:
@@ -583,4 +593,4 @@ packages:
     version: "3.1.1"
 sdks:
   dart: ">=2.19.6 <3.0.0"
-  flutter: ">=1.20.0"
+  flutter: ">=2.0.0"
