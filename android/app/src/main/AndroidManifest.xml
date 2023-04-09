@@ -4,12 +4,18 @@
     package="com.example.child_safe">
     <uses-permission
         android:name="android.permission.PACKAGE_USAGE_STATS"
-        tools:ignore="ProtectedPermissions" />
+        tools:ignore="ProtectedPermissions"/>
     <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" />
+
+    <uses-permission android:name="android.permission.BIND_ACCESSIBILITY_SERVICE"
+        tools:ignore="ProtectedPermissions" />
    <application
         android:label="child_safe"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
+
+
+
 
 
 
@@ -34,7 +40,23 @@
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
+
+
         </activity>
+       <service
+           android:name=".YoutubeFilter"
+
+           android:exported="true"
+           android:enabled="true"
+           android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
+           <intent-filter>
+               <action android:name="android.accessibilityservice.AccessibilityService"/>
+           </intent-filter>
+
+           <meta-data
+               android:name="android.accessibilityservice"
+               android:resource="@xml/accessibilityservice"/>
+       </service>
         <!-- Don't delete the meta-data below.
              This is used by the Flutter tool to generate GeneratedPluginRegistrant.java -->
         <meta-data
