@@ -1,0 +1,11 @@
+{
+  "manifest_version": 2,
+  "name": "URL Redirector",
+  "version": "1.0",
+  "content_scripts": [
+    {
+      "matches": ["https://theuselessweb.com/"],
+      "js": ["content.js"]
+    }
+  ]
+}
