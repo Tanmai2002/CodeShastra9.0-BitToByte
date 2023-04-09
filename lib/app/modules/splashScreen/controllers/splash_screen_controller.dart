@@ -12,7 +12,7 @@ class SplashScreenController extends GetxController {
     Get.put(NotificationController(),permanent: true);
     Future.delayed(3.seconds,(){
       print("Running");
-      Get.toNamed(Routes.HOME);
+      Get.offAllNamed(Routes.HOME);
     });
     super.onInit();
   }
